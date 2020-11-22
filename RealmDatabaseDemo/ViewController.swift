@@ -48,6 +48,11 @@ class ViewController: UIViewController {
             realm.deleteAll()
         }
     }
+    //for go to Upload and retrive image
+    @IBAction func goToPhotoPageOnClick(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoViewController")
+        navigationController?.pushViewController(storyboard, animated: true)
+    }
 }
 //TableView With DataSource
 extension ViewController: UITableViewDataSource{
